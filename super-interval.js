@@ -1,9 +1,8 @@
 
 const timer = require('./super-timer.js')
 
-function superInterval(yourFunction, numberOfRepeats, timeToWait){
-
-  function doMyStuff(){
+function superInterval (yourFunction, numberOfRepeats, timeToWait) {
+  function doMyStuff () {
     yourFunction()
     timer.superTimer(timeToWait)
   }
@@ -11,3 +10,6 @@ function superInterval(yourFunction, numberOfRepeats, timeToWait){
   arrayOfIterations.forEach(doMyStuff)
 };
 
+module.exports = {
+  superInterval
+}
